@@ -1,15 +1,14 @@
 # MEMORY.md — Universo Narrado Clone
 
 ## Estado Atual
-- **Fase:** Módulo 1 (Infraestrutura) em andamento.
+- **Fase:** Módulo 2 (Backend/Banco) concluído. Avançando para Módulo 3 (Motor de Cálculo/Relatórios).
 - **Repositório Remoto:** `https://github.com/alesauer/upskill.git` (branch `main`).
 - **Base de Design:** `designmd/designmd-universonarrado-com-br/` (DesignMD tokens, Tailwind v4 `@theme`, Museo + Young Serif, paleta `#ffffff`, `#0cf2b5`, `#03203d`, `#1c3752`, `#4a6079`, `#eaf0ff`, `#f1ecff`, `#f9f3e3`, `#fff9d6`, `#e3e7eb`).
 
-## Arquitetura Planejada
+## Arquitetura Implementada
 - **Frontend & SSR:** Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS v4.
-- **Banco de Dados & Persistência:** SQLite nativo (`node:sqlite` / `DatabaseSync`) em `data/universo.db` (ignorado no Git).
-- **Motor de Cálculo & Relatórios:** `src/lib/calculator.ts` — Diagnóstico de Nivelamento e Trilha de Estudos (`DMAT → LM → LF → LC`), cálculo de carga horária semanal, estimativa de semanas e exportação JSON/CSV.
-- **Páginas:** `/`, `/cursos`, `/cursos/[slug]`, `/314-editora`, `/sobre/historia`, `/suporte`, `/entrar`, `/aluno`.
+- **Banco de Dados & Persistência:** `src/lib/db.ts` com SQLite nativo (`node:sqlite` / `DatabaseSync`) em `data/universo.db` (ignorado no Git). Tabelas: `courses`, `books`, `users`, `sessions`, `enrollments`, `diagnostics`, `support_tickets`.
+- **Autenticação:** `src/lib/auth.ts` com `scrypt` + salt + `timingSafeEqual` e cookie `httpOnly` (`un_session`). Usuário demo: `aluno@universonarrado.com.br` / `sapereaude`.
 
 ## Endpoints Planejados
 - `GET /api/health`
