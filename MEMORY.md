@@ -1,7 +1,7 @@
 # MEMORY.md — Universo Narrado Clone
 
 ## Estado Atual
-- **Fase:** Módulo 4 (Frontend) implementado; build de produção em execução para validação.
+- **Fase:** Todos os 5 módulos concluídos e validados (Infraestrutura, Backend/Banco, Motor de Cálculo/Relatórios, Frontend e Validação Final).
 - **Repositório Remoto:** `https://github.com/alesauer/upskill.git` (branch `main`).
 - **Base de Design:** `designmd/designmd-universonarrado-com-br/` (DesignMD tokens, Tailwind v4 `@theme`, Museo + Young Serif, paleta `#ffffff`, `#0cf2b5`, `#03203d`, `#1c3752`, `#4a6079`, `#eaf0ff`, `#f1ecff`, `#f9f3e3`, `#fff9d6`, `#e3e7eb`).
 
@@ -13,26 +13,26 @@
 - **Autenticação:** `src/lib/auth.ts` com `scrypt` + salt + `timingSafeEqual` e cookie `httpOnly` (`un_session`). Usuário demo: `aluno@universonarrado.com.br` / `sapereaude`.
 - **Motor de Cálculo & Relatórios:** `src/lib/calculator.ts` (`calculateTrilha`, `formatTrilhaCsv`), APIs `POST/GET /api/diagnostico` e `GET /api/reports/trilha?format=json|csv`, testados em `tests/calculator.test.ts` (5/5 passando).
 
-## Endpoints Planejados
-- `GET /api/health`
-- `GET /api/courses`
-- `GET /api/books`
-- `POST /api/diagnostico` | `GET /api/diagnostico`
-- `GET /api/reports/trilha`
-- `POST /api/support` | `GET /api/support`
-- `POST /api/auth/login` | `POST /api/auth/logout` | `GET /api/auth/session`
-- `GET /api/progress` | `POST /api/progress`
+## Endpoints Criados
+- `GET /api/health` — Status da aplicação e contagem de registros no SQLite
+- `GET /api/courses` — Lista os 4 cursos (`DMAT`, `LM`, `LF`, `LC`) com filtro opcional `?code=`
+- `GET /api/books` — Catálogo da Editora 314
+- `POST /api/diagnostico` | `GET /api/diagnostico` — Executa o Motor de Cálculo de Trilha e persiste no SQLite
+- `GET /api/reports/trilha?format=json|csv` — Exportação de relatórios de diagnóstico (JSON ou CSV com BOM UTF-8)
+- `POST /api/support` | `GET /api/support` — Registro e listagem de tickets de suporte
+- `POST /api/auth/login` | `POST /api/auth/logout` | `GET /api/auth/session` — Autenticação e sessão
+- `GET /api/progress` | `POST /api/progress` — Progresso de módulos na Área do Aluno
 
 ## Comandos de Execução
 - `npm install` — Instalar dependências
-- `npm run dev` — Servidor de desenvolvimento
+- `npm run dev` — Servidor de desenvolvimento (`http://localhost:3000`)
 - `npm run build` — Build de produção
-- `npm run typecheck` — Verificação TypeScript
-- `npm test` — Testes automatizados (`node --test`)
+- `npm run start` — Servidor de produção
+- `npm run typecheck` — Verificação TypeScript (`tsc --noEmit`)
+- `npm test` — Testes unitários (`node --test tests/*.test.ts`)
 
-## Próximos Passos
-1. Instalar dependências e configurar `src/app/globals.css` com os tokens exatos do DesignMD.
-2. Implementar Backend/Banco (`src/lib/db.ts`, seed e APIs).
-3. Implementar Motor de Cálculo & Relatórios (`src/lib/calculator.ts` + `/api/diagnostico` + `/api/reports/trilha`).
-4. Implementar Frontend completo fiel ao Universo Narrado.
-5. Executar testes unitários, integração, build e validação visual/browser.
+## Validação Realizada
+- `npm run typecheck` — 0 erros
+- `npm test` — 5/5 testes unitários passando (`tests/calculator.test.ts`)
+- `npm run build` — 20/20 rotas compiladas com sucesso
+- Smoke test E2E em servidor de produção (`next start -p 3014`) validando todas as páginas (`200 OK`) e todos os endpoints de API + SQLite.
