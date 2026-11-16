@@ -61,3 +61,4 @@ export async function getCurrentUser(): Promise<SessionUser | null> {
     target_exam: row.target_exam,
   };
 }
+

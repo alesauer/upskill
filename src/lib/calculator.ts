@@ -264,3 +264,4 @@ export function formatTrilhaCsv(rows: DiagnosticReportRow[]): string {
 
   return "\uFEFF" + [header, ...lines].join("\r\n");
 }
+

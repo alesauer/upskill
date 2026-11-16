@@ -95,3 +95,4 @@ export async function POST(req: NextRequest) {
     completed_lessons: completed,
   });
 }
+

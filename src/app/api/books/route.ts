@@ -8,3 +8,4 @@ export async function GET() {
     total: books.length,
   });
 }
+

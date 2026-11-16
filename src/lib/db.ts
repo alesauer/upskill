@@ -540,3 +540,4 @@ export function getAllBooks(): BookRecord[] {
     highlights: JSON.parse(String(r.highlights)),
   }));
 }
+

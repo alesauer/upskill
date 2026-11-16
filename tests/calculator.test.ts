@@ -73,3 +73,4 @@ test("formatTrilhaCsv generates valid UTF-8 BOM CSV with escaped values", () => 
   assert.ok(csv.startsWith("\uFEFFID,Vestibular_Objetivo"));
   assert.ok(csv.includes("ITA_IME,4,5,15,desvendando-a-matematica,28"));
 });
+

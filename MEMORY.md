@@ -1,12 +1,14 @@
 # MEMORY.md — Universo Narrado Clone
 
 ## Estado Atual
-- **Fase:** Módulo 3 (Motor de Cálculo/Relatórios) concluído com 5/5 testes unitários passando. Avançando para Módulo 4 (Frontend).
+- **Fase:** Módulo 4 (Frontend) implementado; build de produção em execução para validação.
 - **Repositório Remoto:** `https://github.com/alesauer/upskill.git` (branch `main`).
 - **Base de Design:** `designmd/designmd-universonarrado-com-br/` (DesignMD tokens, Tailwind v4 `@theme`, Museo + Young Serif, paleta `#ffffff`, `#0cf2b5`, `#03203d`, `#1c3752`, `#4a6079`, `#eaf0ff`, `#f1ecff`, `#f9f3e3`, `#fff9d6`, `#e3e7eb`).
 
 ## Arquitetura Implementada
 - **Frontend & SSR:** Next.js 15 (App Router) + React 19 + TypeScript + Tailwind CSS v4.
+  - Páginas: `/` (Home), `/cursos` (Trilha + 4 degraus + Calculadora), `/cursos/[slug]` (Ementa detalhada), `/314-editora`, `/sobre/historia`, `/suporte`, `/entrar`, `/aluno`.
+  - Componentes: `Navbar`, `Footer`, `DesignSystem`, `CourseCoverArt`, `TimelineSection`, `TrilhaCalculator`, `SupportForm`, `StudentDashboard`.
 - **Banco de Dados & Persistência:** `src/lib/db.ts` com SQLite nativo (`node:sqlite` / `DatabaseSync`) em `data/universo.db` (ignorado no Git). Tabelas: `courses`, `books`, `users`, `sessions`, `enrollments`, `diagnostics`, `support_tickets`.
 - **Autenticação:** `src/lib/auth.ts` com `scrypt` + salt + `timingSafeEqual` e cookie `httpOnly` (`un_session`). Usuário demo: `aluno@universonarrado.com.br` / `sapereaude`.
 - **Motor de Cálculo & Relatórios:** `src/lib/calculator.ts` (`calculateTrilha`, `formatTrilhaCsv`), APIs `POST/GET /api/diagnostico` e `GET /api/reports/trilha?format=json|csv`, testados em `tests/calculator.test.ts` (5/5 passando).
