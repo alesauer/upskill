@@ -1,0 +1,139 @@
+---
+name: universonarrado-com-br-design-system
+description: Apply the universonarrado.com.br design system measured by DesignMD — exact colors, typography, spacing, radii, shadows, motion and component recipes. Use when building, styling or reviewing UI that should match universonarrado.com.br.
+---
+
+# universonarrado.com.br design system
+
+Measured from https://universonarrado.com.br/cursos#trilha by DesignMD on 2026-11-16. Use these exact values — do not round, approximate or invent new ones. When something is not covered here, extend the closest existing token instead of adding a new color, size or radius.
+
+## Colors
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `--color-bg-canvas` | `#ffffff` | Canvas — Page background |
+| `--color-text-primary` | `#1c3752` | Primary Text — Primary copy, headings, high-emphasis UI labels |
+| `--color-text-secondary` | `#4a6079` | Secondary Text — Supporting copy and descriptions |
+| `--color-accent` | `#03203d` | Brand Accent — Primary interactive color |
+| `--color-bg-surface` | `#0cf2b5` | Surface — Elevated container fill |
+| `--color-gray-light` | `#eaf0ff` | Gray Light — Supporting surface / fill color |
+| `--color-gray-light-2` | `#f1ecff` | Gray Light 2 — Supporting surface / fill color |
+| `--color-gray-light-3` | `#f9f3e3` | Gray Light 3 — Supporting surface / fill color |
+| `--color-gray-light-4` | `#fff9d6` | Gray Light 4 — Supporting surface / fill color |
+| `--color-gray-light-5` | `#e3e7eb` | Gray Light 5 — Supporting border color |
+
+## Typography
+
+- **Display:** Museo — `Museo, ui-rounded, "Segoe UI", system-ui, sans-serif`
+- **Body:** Museo — `Museo, ui-rounded, "Segoe UI", system-ui, sans-serif`
+- **Scale:** display 67px/1.04 w400, heading-xl 64px/1.04 w900, heading-lg 48px/1.08 w900, heading 40px/1.08 w900, heading-sm 22px/1.45 w300, subheading 20px/1.2 w700, body 18px/1.45 w300, small 15px/1.55 w300, caption 13px/1.55 w700
+
+## Shape, space and depth
+
+- **Radius:** sm 12px (button, card), md 16px (card), lg 28px (card), full 9999px (pills)
+- **Spacing:** 4px base unit, 1260px max content width, 24px card padding
+- **Elevation:** sm `rgb(3, 32, 61) 4px 4px 0px 0px`; md `rgba(255, 255, 255, 0.9) 4px 4px 0px 0px`
+- **Motion:** fast 150ms; easing `ease`
+- **Breakpoints:** 600px, 640px, 800px, 960px
+
+## Component recipes
+
+- **Primary button:** #0cf2b5 background, #03203d text, radius 12px, padding 0px 24px, Museo 700 17px, border 1px solid rgb(3, 32, 61)
+- **Secondary button:** transparent background, #03203d text, radius 12px, padding 0px 24px, Museo 700 17px, border 1px solid rgb(3, 32, 61)
+- **Secondary button:** #0cf2b5 background, #03203d text, radius 9999px, padding 0px 16px, Museo 700 15px, border 1px solid rgb(3, 32, 61)
+
+## Rules
+
+- Do: Use `#ffffff` as the canvas and build every surface from the token table above — never invent intermediate grays
+- Do: Use #03203d exclusively for interactive moments (buttons, links, key fills) — it is the energy of the system
+- Do: Snap all spacing to the 4px base unit grid
+- Do: Use fully-rounded (pill, 9999px) radii for buttons and tags
+- Do: Default interactive transitions to 150ms with the extracted easing tokens
+- Don't: introduce colors outside the 10-token palette extracted above
+- Don't: add springy/bounce motion — the source uses the timing functions listed under Tokens — Motion
+- Don't: stack multiple shadows — keep elevation minimal and let whitespace separate content
+
+## Tailwind v4 theme
+
+```css
+@import "tailwindcss";
+
+@theme {
+  /* Colors → bg-*, text-*, border-* */
+  --color-bg-canvas: #ffffff;
+  --color-text-primary: #1c3752;
+  --color-text-secondary: #4a6079;
+  --color-accent: #03203d;
+  --color-bg-surface: #0cf2b5;
+  --color-gray-light: #eaf0ff;
+  --color-gray-light-2: #f1ecff;
+  --color-gray-light-3: #f9f3e3;
+  --color-gray-light-4: #fff9d6;
+  --color-gray-light-5: #e3e7eb;
+
+  /* Fonts → font-display, font-body, font-mono */
+  --font-display: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale → text-display, text-body, … */
+  --text-display: 67px;
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -1.33px;
+  --text-heading-xl: 64px;
+  --text-heading-xl--line-height: 1.04;
+  --text-heading-xl--letter-spacing: -1.79px;
+  --text-heading-xl--font-weight: 900;
+  --text-heading-lg: 48px;
+  --text-heading-lg--line-height: 1.08;
+  --text-heading-lg--letter-spacing: -1.15px;
+  --text-heading-lg--font-weight: 900;
+  --text-heading: 40px;
+  --text-heading--line-height: 1.08;
+  --text-heading--letter-spacing: -0.96px;
+  --text-heading--font-weight: 900;
+  --text-heading-sm: 22px;
+  --text-heading-sm--line-height: 1.45;
+  --text-heading-sm--font-weight: 300;
+  --text-subheading: 20px;
+  --text-subheading--line-height: 1.2;
+  --text-subheading--font-weight: 700;
+  --text-body: 18px;
+  --text-body--line-height: 1.45;
+  --text-body--font-weight: 300;
+  --text-small: 15px;
+  --text-small--line-height: 1.55;
+  --text-small--font-weight: 300;
+  --text-caption: 13px;
+  --text-caption--line-height: 1.55;
+  --text-caption--letter-spacing: 1.04px;
+  --text-caption--font-weight: 700;
+
+  /* Radius → rounded-* */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows → shadow-* */
+  --shadow-sm: rgb(3, 32, 61) 4px 4px 0px 0px;
+  --shadow-md: rgba(255, 255, 255, 0.9) 4px 4px 0px 0px;
+
+  /* Easing → ease-* */
+  --ease-custom-1: ease;
+
+  /* Breakpoints → sm:, md:, lg:, … (measured from the source) */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 800px;
+  --breakpoint-xl: 960px;
+}
+
+/* Durations have no Tailwind namespace — use as duration-(--duration-base) */
+:root {
+  --duration-fast: 150ms;
+}
+```
+
+## Full specification
+
+The complete measured spec — state matrix, page blueprint, responsive behaviour, real copy and starter components — is in [design.md](design.md) in this folder. Read it before building a full page.

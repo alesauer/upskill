@@ -1,0 +1,20 @@
+Rebuild the universonarrado.com.br landing page using this extracted design spec. Follow it exactly.
+
+COLOR TOKENS: Canvas #ffffff · Primary Text #1c3752 · Secondary Text #4a6079 · Brand Accent #03203d · Surface #0cf2b5 · Gray Light #eaf0ff · Gray Light 2 #f1ecff · Gray Light 3 #f9f3e3 · Gray Light 4 #fff9d6 · Gray Light 5 #e3e7eb
+TYPE: Museo for displayMuseo for body. Scale: display 67px/1.04 w400, heading-xl 64px/1.04 w900, heading-lg 48px/1.08 w900, heading 40px/1.08 w900, heading-sm 22px/1.45 w300, subheading 20px/1.2 w700, body 18px/1.45 w300, small 15px/1.55 w300, caption 13px/1.55 w700
+LAYOUT: max-width 1260px, section gap ?px, card padding 24px, base unit 4px.
+SECTION ORDER: 1) hero "Escolha o curso pelo ponto em que você e" → 2) content "Quatro cursos, uma escada" → 3) content "Desvendando a Matemática" → 4) content "Lições de Matemática" → 5) content "Lições de Física" → 6) content "Lições de Cálculo" → 7) content "Área do aluno"
+HERO: headline "Escolha o curso pelo ponto em que você está.", CTAs "Começar Do Zero" + "Ver A Trilha".
+NAV: logo, 5 links, CTA "Entrar".
+PRIMARY BUTTON: #0cf2b5 bg, #03203d text, radius 12px, padding 0px 24px, Museo 700 17px.
+MOTION: fast 150ms with ease
+PAGE BANDS: header 88px #ffffff 3-col | hero 699px #ffffff 2-col | content 585px #ffffff | content 699px #ffffff | content 746px #ffffff | content 699px #ffffff | content 699px #ffffff | content 558px #ffffff 2-col | footer 370px #ffffff 4-col
+CONTAINER: 1200px / 460px / 680px content widths.
+RESPONSIVE: desktop-first — <sm: height 56px | <md: 1 col; space -31%; type -13% | <md: 1 col; padding-bottom 24px; font-size 22px | <lg: 1 col; column-gap 0px; font-size 48px
+STATES: primaryButton hover shadow→6px 6px 0 #03203D, transform→translate(-2px, -2px) | secondaryButton hover shadow→6px 6px 0 #03203D, transform→translate(-2px, -2px) | link hover shadow→1px 1px 0 #03203D, transform→0px -3px | navItem hover color→#03203D
+FONT STACKS: body `Museo, ui-rounded, "Segoe UI", system-ui, sans-serif` (self-hosted).
+NAV COPY: "Cursos" "Editora" "Nossa história" "Suporte"
+SECTION HEADLINES: hero: "Escolha o curso pelo ponto em que você está." | content: "Quatro cursos, uma escada" | content: "Desvendando a Matemática" | features: "Lições de Matemática" | content: "Lições de Física" | content: "Lições de Cálculo" | content: "Área do aluno"
+VOICE: title-case headings, ~4.1 words each, 7% are questions.
+
+Rules: use only these colors; respect the section order and band heights; copy the CTA labels and headlines verbatim; keep radii consistent with the extracted tiers; reproduce the hover/focus deltas exactly; do not invent breakpoints beyond the ones listed.

@@ -1,0 +1,77 @@
+/* Tailwind v4 theme measured by DesignMD from https://universonarrado.com.br/cursos#trilha on 2026-11-16. */
+@import "tailwindcss";
+
+@theme {
+  /* Colors → bg-*, text-*, border-* */
+  --color-bg-canvas: #ffffff;
+  --color-text-primary: #1c3752;
+  --color-text-secondary: #4a6079;
+  --color-accent: #03203d;
+  --color-bg-surface: #0cf2b5;
+  --color-gray-light: #eaf0ff;
+  --color-gray-light-2: #f1ecff;
+  --color-gray-light-3: #f9f3e3;
+  --color-gray-light-4: #fff9d6;
+  --color-gray-light-5: #e3e7eb;
+
+  /* Fonts → font-display, font-body, font-mono */
+  --font-display: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+
+  /* Type scale → text-display, text-body, … */
+  --text-display: 67px;
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -1.33px;
+  --text-heading-xl: 64px;
+  --text-heading-xl--line-height: 1.04;
+  --text-heading-xl--letter-spacing: -1.79px;
+  --text-heading-xl--font-weight: 900;
+  --text-heading-lg: 48px;
+  --text-heading-lg--line-height: 1.08;
+  --text-heading-lg--letter-spacing: -1.15px;
+  --text-heading-lg--font-weight: 900;
+  --text-heading: 40px;
+  --text-heading--line-height: 1.08;
+  --text-heading--letter-spacing: -0.96px;
+  --text-heading--font-weight: 900;
+  --text-heading-sm: 22px;
+  --text-heading-sm--line-height: 1.45;
+  --text-heading-sm--font-weight: 300;
+  --text-subheading: 20px;
+  --text-subheading--line-height: 1.2;
+  --text-subheading--font-weight: 700;
+  --text-body: 18px;
+  --text-body--line-height: 1.45;
+  --text-body--font-weight: 300;
+  --text-small: 15px;
+  --text-small--line-height: 1.55;
+  --text-small--font-weight: 300;
+  --text-caption: 13px;
+  --text-caption--line-height: 1.55;
+  --text-caption--letter-spacing: 1.04px;
+  --text-caption--font-weight: 700;
+
+  /* Radius → rounded-* */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  /* Shadows → shadow-* */
+  --shadow-sm: rgb(3, 32, 61) 4px 4px 0px 0px;
+  --shadow-md: rgba(255, 255, 255, 0.9) 4px 4px 0px 0px;
+
+  /* Easing → ease-* */
+  --ease-custom-1: ease;
+
+  /* Breakpoints → sm:, md:, lg:, … (measured from the source) */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 800px;
+  --breakpoint-xl: 960px;
+}
+
+/* Durations have no Tailwind namespace — use as duration-(--duration-base) */
+:root {
+  --duration-fast: 150ms;
+}

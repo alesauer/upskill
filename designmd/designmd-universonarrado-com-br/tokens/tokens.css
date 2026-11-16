@@ -1,0 +1,65 @@
+/* Design tokens measured by DesignMD from https://universonarrado.com.br/cursos#trilha on 2026-11-16. */
+:root {
+  /* Colors */
+  --color-bg-canvas: #ffffff;
+  --color-text-primary: #1c3752;
+  --color-text-secondary: #4a6079;
+  --color-accent: #03203d;
+  --color-bg-surface: #0cf2b5;
+  --color-gray-light: #eaf0ff;
+  --color-gray-light-2: #f1ecff;
+  --color-gray-light-3: #f9f3e3;
+  --color-gray-light-4: #fff9d6;
+  --color-gray-light-5: #e3e7eb;
+
+  /* Typography — Font Families (by role) */
+  --font-display: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-body: Museo, ui-rounded, "Segoe UI", system-ui, sans-serif;
+
+  /* Typography — Scale */
+  --text-display: 67px;
+  --leading-display: 1.04;
+  --tracking-display: -1.33px;
+  --text-heading-xl: 64px;
+  --leading-heading-xl: 1.04;
+  --tracking-heading-xl: -1.79px;
+  --text-heading-lg: 48px;
+  --leading-heading-lg: 1.08;
+  --tracking-heading-lg: -1.15px;
+  --text-heading: 40px;
+  --leading-heading: 1.08;
+  --tracking-heading: -0.96px;
+  --text-heading-sm: 22px;
+  --leading-heading-sm: 1.45;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --text-body: 18px;
+  --leading-body: 1.45;
+  --text-small: 15px;
+  --leading-small: 1.55;
+  --text-caption: 13px;
+  --leading-caption: 1.55;
+  --tracking-caption: 1.04px;
+
+  /* Layout */
+  --page-max-width: 1260px;
+  --card-padding: 24px;
+  --element-gap: 10px;
+  --spacing-unit: 4px;
+
+  /* Border Radius */
+  --radius-sm: 12px; /* button, card */
+  --radius-md: 16px; /* card */
+  --radius-lg: 28px; /* card */
+  --radius-full: 9999px; /* pills */
+
+  /* Shadows */
+  --shadow-sm: rgb(3, 32, 61) 4px 4px 0px 0px;
+  --shadow-md: rgba(255, 255, 255, 0.9) 4px 4px 0px 0px;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --ease-custom-1: ease;
+
+  /* Iconography */
+}

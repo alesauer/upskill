@@ -1,0 +1,198 @@
+{
+  "color": {
+    "bg-canvas": {
+      "value": "#ffffff",
+      "comment": "Page background — the base layer every other surface floats on"
+    },
+    "text-primary": {
+      "value": "#1c3752",
+      "comment": "Primary copy, headings, high-emphasis UI labels — 12.2:1 against canvas"
+    },
+    "text-secondary": {
+      "value": "#4a6079",
+      "comment": "Supporting copy and descriptions — 6.5:1 against canvas"
+    },
+    "accent": {
+      "value": "#03203d",
+      "comment": "Primary interactive color — buttons, links, key fills carry the brand energy"
+    },
+    "bg-surface": {
+      "value": "#0cf2b5",
+      "comment": "Elevated container fill — cards, nav bars, panels sitting on the canvas"
+    },
+    "gray-light": {
+      "value": "#eaf0ff",
+      "comment": "Supporting surface / fill color"
+    },
+    "gray-light-2": {
+      "value": "#f1ecff",
+      "comment": "Supporting surface / fill color"
+    },
+    "gray-light-3": {
+      "value": "#f9f3e3",
+      "comment": "Supporting surface / fill color"
+    },
+    "gray-light-4": {
+      "value": "#fff9d6",
+      "comment": "Supporting surface / fill color"
+    },
+    "gray-light-5": {
+      "value": "#e3e7eb",
+      "comment": "Supporting border color"
+    }
+  },
+  "font": {
+    "family": {
+      "display": {
+        "value": "Museo, ui-rounded, \"Segoe UI\", system-ui, sans-serif"
+      },
+      "body": {
+        "value": "Museo, ui-rounded, \"Segoe UI\", system-ui, sans-serif"
+      }
+    },
+    "size": {
+      "display": {
+        "value": "67px"
+      },
+      "heading-xl": {
+        "value": "64px"
+      },
+      "heading-lg": {
+        "value": "48px"
+      },
+      "heading": {
+        "value": "40px"
+      },
+      "heading-sm": {
+        "value": "22px"
+      },
+      "subheading": {
+        "value": "20px"
+      },
+      "body": {
+        "value": "18px"
+      },
+      "small": {
+        "value": "15px"
+      },
+      "caption": {
+        "value": "13px"
+      }
+    },
+    "weight": {
+      "display": {
+        "value": 400
+      },
+      "heading-xl": {
+        "value": 900
+      },
+      "heading-lg": {
+        "value": 900
+      },
+      "heading": {
+        "value": 900
+      },
+      "heading-sm": {
+        "value": 300
+      },
+      "subheading": {
+        "value": 700
+      },
+      "body": {
+        "value": 300
+      },
+      "small": {
+        "value": 300
+      },
+      "caption": {
+        "value": 700
+      }
+    },
+    "lineHeight": {
+      "display": {
+        "value": 1.04
+      },
+      "heading-xl": {
+        "value": 1.04
+      },
+      "heading-lg": {
+        "value": 1.08
+      },
+      "heading": {
+        "value": 1.08
+      },
+      "heading-sm": {
+        "value": 1.45
+      },
+      "subheading": {
+        "value": 1.2
+      },
+      "body": {
+        "value": 1.45
+      },
+      "small": {
+        "value": 1.55
+      },
+      "caption": {
+        "value": 1.55
+      }
+    }
+  },
+  "radius": {
+    "sm": {
+      "value": "12px"
+    },
+    "md": {
+      "value": "16px"
+    },
+    "lg": {
+      "value": "28px"
+    },
+    "full": {
+      "value": "9999px"
+    }
+  },
+  "spacing": {
+    "unit": {
+      "value": "4px"
+    },
+    "card": {
+      "value": "24px"
+    },
+    "container": {
+      "value": "1260px"
+    }
+  },
+  "shadow": {
+    "sm": {
+      "value": "rgb(3, 32, 61) 4px 4px 0px 0px"
+    },
+    "md": {
+      "value": "rgba(255, 255, 255, 0.9) 4px 4px 0px 0px"
+    }
+  },
+  "duration": {
+    "fast": {
+      "value": "150ms"
+    }
+  },
+  "easing": {
+    "custom-1": {
+      "value": "ease"
+    }
+  },
+  "breakpoint": {
+    "sm": {
+      "value": "600px"
+    },
+    "md": {
+      "value": "640px"
+    },
+    "lg": {
+      "value": "800px"
+    },
+    "xl": {
+      "value": "960px"
+    }
+  }
+}
